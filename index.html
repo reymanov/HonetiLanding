@@ -22,11 +22,12 @@
           <li><a href="#main" class="nav-link">Start</a></li>
           <li><a href="#phones" class="nav-link">Jak to działa ?</a></li>
           <li><a href="#pricing" class="nav-link">Cennik</a></li>
-          <li><a href="#" class="nav-link">Logowanie</a></li>
-          <li><a href="#" class="nav-link">Rejestracja</a></li>
+          <li><button onClick="setLog()" class="nav-button">Logowanie</button></li>
+          <li><button onClick="setReg()" class="nav-button">Rejestracja</button></li>
         </ul>
       </nav>
     </header>
+
     <main id="main">
       <div class="hero-text-container">
         <h2 class="hero-title">Poznaj Lorem Ipsum!</h2>
@@ -55,7 +56,16 @@
         ></path>
       </svg>
     </div>
+    <p id = "GFG_UP" style = 
+            "font-size: 15px; font-weight: bold;"> 
+        </p>
     </main>
+
+    <section class="form-container">
+        <div id="loginPopup">Login Form</div>
+        <div id="registerPopup">Register Form</div>
+    </section>
+
     <section class="phones" id="phones">
         <h2 class="phones-title">Jak to działa ?</h2>
         <div class="phones-container">
@@ -167,5 +177,6 @@
         </div>
     </section>
     <script src="./scripts/scroll.js"></script>
+    <script src="./scripts/render.js"></script>
   </body>
 </html>
