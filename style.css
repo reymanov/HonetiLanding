@@ -50,6 +50,7 @@ nav ul {
   display: flex;
   justify-content: space-evenly;
   font-size: 1em;
+  font-weight: 400;
 }
 
 nav ul li {
@@ -115,7 +116,9 @@ nav ul li:nth-child(3)::after {
   color: orange;
   margin: 0 15px 0 0;
   border: 2px #fff solid;
+  background-color: #fff;
   border-radius: 5px;
+  transition: transform 0.5s ease;
 }
 
 .hero-button:nth-of-type(2) {
@@ -125,6 +128,7 @@ nav ul li:nth-child(3)::after {
 
 .hero-button:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 .hero-arrow {
@@ -253,7 +257,7 @@ nav ul li:nth-child(3)::after {
 
 .pricing {
   width: 100%;
-  min-height: 1100px;
+  padding: 0 0 10em 0;
   background: linear-gradient(133deg, rgb(38, 18, 112), rgba(85, 20, 148, 1));
 }
 
@@ -417,6 +421,8 @@ nav ul li:nth-child(3)::after {
 .premium input {
   width: 60%;
   margin: 0.3em auto;
+  font-size: 0.5em;
+  padding: 0 0.6em;
 }
 
 .right-box-list {
@@ -460,6 +466,7 @@ nav ul li:nth-child(3)::after {
   color: #fff;
   border: none;
   border-radius: 5px;
+  transition: transform 0.5s ease;
 }
 
 .right-box-bottom button:nth-of-type(2) {
@@ -471,6 +478,7 @@ nav ul li:nth-child(3)::after {
 
 .right-box-bottom button:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 @media (max-width: 1650px) {
@@ -566,11 +574,19 @@ nav ul li:nth-child(3)::after {
     width: 80%;
     left: 10%;
   }
-}
 
-@media (max-width: 900px) {
+  .pricing-container {
+    width: 90%;
+    zoom: 0.7;
+  }
+
   .phones-container {
     zoom: 0.5;
+  }
+
+  .pricing-title {
+    font-size: 1em;
+    padding: 4em 4em;
   }
 }
 
@@ -588,5 +604,10 @@ nav ul li:nth-child(3)::after {
 
   .hero-button {
     width: 40%;
+  }
+
+  .pricing-container {
+    width: 90%;
+    zoom: 0.5;
   }
 }
