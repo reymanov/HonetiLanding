@@ -6,6 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 main {
@@ -125,6 +126,126 @@ nav ul li:nth-child(3)::after {
   cursor: pointer;
 }
 
+.hero-arrow {
+  position: absolute;
+  bottom: 4.5vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6em;
+  z-index: 3;
+}
+
+.phones {
+  width: 100vw;
+  min-height: 800px;
+  background-color: #fff;
+  position: relative;
+  text-align: center;
+}
+
+.phones-title {
+  font-size: 2.5em;
+}
+
+.phones-subtitle {
+  font-size: 2.5em;
+  color: orange;
+  position: relative;
+  margin: 300px 0 100px 0;
+}
+
+.phones-container {
+  width: 1100px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+
+.box {
+  display: flex;
+  text-align: left;
+}
+
+.box:nth-child(2) {
+  transform: translateY(250px) translateX(-50px);
+}
+
+.box:nth-child(4) {
+  transform: translateY(250px) translateX(-100px);
+}
+
+.box:nth-child(2) .box-text {
+  margin-top: 100px;
+}
+
+.box:nth-child(3) .box-text {
+  margin-top: 60px;
+}
+
+.box:nth-child(4) .box-text {
+  margin-top: 60px;
+}
+
+.box-title {
+  width: 180px;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  display: flex;
+  margin-top: 10%;
+}
+
+.box-number {
+  font-size: 3em;
+  font-weight: 400;
+  margin: 15px;
+}
+
+.box-description {
+  width: 220px;
+  font-size: 1em;
+  margin: 5% 5%;
+}
+
+.box:nth-of-type(1) .phone-img {
+  transform: rotateZ(-25deg);
+}
+
+.box:nth-of-type(2) .phone-img {
+  order: 1;
+}
+
+.box:nth-of-type(4) .phone-img {
+  transform: translateY(100px) rotateZ(-75deg);
+}
+
+.box-title,
+.phones-subtitle {
+  color: rgb(226, 151, 11);
+  font-family: "Patrick Hand", cursive;
+}
+
+.arrow {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+
+.arrow-1 {
+  transform: translateX(60px) translateY(-60px);
+}
+
+.arrow-2 {
+  transform: translateX(420px) translateY(-80px) scaleX(-1) rotateZ(15deg);
+}
+
+.arrow-3 {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  transform: translateX(120px) translateY(-20px) rotateZ(-10deg);
+}
+
 @media (max-width: 1650px) {
   body {
     font-size: 15px;
@@ -137,6 +258,9 @@ nav ul li:nth-child(3)::after {
   .hero-text-container {
     left: 10%;
   }
+}
+
+@media (max-width: 1450px) {
 }
 
 @media (max-width: 1250px) {
@@ -156,5 +280,24 @@ nav ul li:nth-child(3)::after {
 
   header {
     padding: 2% 5%;
+  }
+
+  .phones-container {
+    width: 900px;
+    zoom: 0.8;
+  }
+
+  .box:nth-child(2) {
+    transform: translateY(250px) translateX(-100px);
+  }
+}
+
+@media (max-width: 900px) {
+  .phones-container {
+    zoom: 0.6;
+  }
+
+  .phones-subtitle {
+    margin: 150px 0 80px 0;
   }
 }
