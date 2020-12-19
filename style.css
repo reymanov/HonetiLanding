@@ -23,7 +23,7 @@ header {
   position: absolute;
   z-index: 1;
   width: 100%;
-  padding: 2em 10em;
+  padding: 2% 10%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -80,31 +80,29 @@ nav ul li:nth-child(3)::after {
 }
 
 .hero-img {
-  width: 40%;
-  max-width: 660px;
+  width: 640px;
   position: absolute;
-  right: 8%;
+  right: 10%;
   bottom: -10%;
 }
 
 .hero-text-container {
   width: 40%;
-  height: 220px;
   position: absolute;
   top: 35%;
   left: 15%;
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  z-index: 2;
 }
 
 .hero-title {
   font-size: 4em;
+  margin-bottom: 0.2em;
 }
 
 .hero-description {
   font-size: 1.2em;
+  margin-bottom: 1em;
 }
 
 .hero-button {
@@ -125,4 +123,38 @@ nav ul li:nth-child(3)::after {
 
 .hero-button:hover {
   cursor: pointer;
+}
+
+@media (max-width: 1650px) {
+  body {
+    font-size: 15px;
+  }
+
+  .hero-img {
+    right: 0;
+  }
+
+  .hero-text-container {
+    left: 10%;
+  }
+}
+
+@media (max-width: 1250px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero-img {
+    right: -120px;
+    width: 600px;
+  }
+
+  .hero-text-container {
+    left: 5%;
+    width: 50%;
+  }
+
+  header {
+    padding: 2% 5%;
+  }
 }
