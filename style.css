@@ -251,6 +251,124 @@ nav ul li:nth-child(3)::after {
   transform: translateX(120px) translateY(-20px) rotateZ(-10deg);
 }
 
+.pricing {
+  width: 100%;
+  min-height: 1100px;
+  background: linear-gradient(133deg, rgb(38, 18, 112), rgba(85, 20, 148, 1));
+}
+
+.pricing-title {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 400;
+  padding: 4em 10em;
+}
+
+.pricing-title span {
+  font-size: 2.5em;
+  font-weight: 500;
+}
+
+.pricing-container {
+  width: 1500px;
+  height: 700px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing-box {
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-box {
+  width: 34%;
+}
+
+.right-box {
+  width: 65%;
+}
+
+.left-box-top {
+  height: 20%;
+  border-bottom: 2px orange solid;
+  text-align: left;
+  padding: 2em;
+  position: relative;
+}
+
+.left-box-top h3 {
+  width: 30%;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+.left-box-top::before {
+  content: "";
+  width: 100px;
+  height: 200px;
+  background: url(./assets/elementy/phone_small.png);
+  background-size: cover;
+  position: absolute;
+  top: -65px;
+}
+
+.left-box-top span {
+  font-size: 2.2rem;
+}
+
+.left-box-mid {
+  height: 20%;
+  border-bottom: 2px orange solid;
+  text-align: center;
+  padding: 1em;
+  font-size: 2.2rem;
+  line-height: 1em;
+}
+
+.left-box-mid span {
+  font-size: 1.2rem;
+}
+
+.left-box-list {
+  padding: 2em 3em;
+  list-style-type: none;
+}
+
+.left-box-list li {
+  line-height: 2em;
+}
+
+.left-box-list li::before {
+  content: "✔";
+  font-size: 1.8em;
+  margin-right: 10px;
+}
+
+.left-box-bottom p {
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 1em 2em;
+}
+
+.left-box-bottom img {
+  width: 150px;
+  height: 45px;
+  margin: 5px;
+}
+
+.left-box-bottom img:hover {
+  cursor: pointer;
+}
+
+.left-box-bottom img:nth-of-type(1) {
+  margin-left: 2em;
+}
+
 @media (max-width: 1650px) {
   body {
     font-size: 15px;
