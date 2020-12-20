@@ -26,6 +26,9 @@
           <li><button onClick="setReg()" class="nav-button">Rejestracja</button></li>
         </ul>
       </nav>
+      <div class="mobile-nav">
+        ☰
+      </div>
     </header>
 
     <main id="main">
@@ -63,6 +66,7 @@
 
     <section class="form-container">
         <div id="loginPopup">
+            <button class="close-popup" onclick="closePopup()">X</button>
             <h2>Zaloguj się</h2>
           <form action="post">
             <input autocomplete="email" type="email" name="email" id="logemail" required placeholder="Email">
@@ -72,6 +76,7 @@
           <a href="#">Zapomniałeś hasła ?</a>
         </div>
         <div id="registerPopup">
+          <button class="close-popup" onclick="closePopup()">X</button>
             <h2>Zarejestruj się</h2>
           <form action="post">
             <input autocomplete="email" type="email" name="email" id="regemail" required placeholder="Email">
@@ -185,8 +190,8 @@
 
                 <div class="right-box-bottom">
                     <h3>Zarejestruj się i wypróbuj!</h3>
-                     <button>Rejestracja</button>
-                     <button>Logowanie</button>
+                     <a href="#main"><button onClick="setReg()">Rejestracja</button></a>
+                     <a href="#main"><button onClick="setLog()">Logowanie</button></a>
                 </div>
             </div>
         </div>

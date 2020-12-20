@@ -22,6 +22,20 @@ function HideAllForms() {
   registerPopup.style.display = "none";
 }
 
+function closePopup() {
+  let url = window.location.href;
+
+  if (url.includes("#login")) {
+    let newUrl = url.slice(0, -6);
+    window.location.href = newUrl;
+  } else if (url.includes("#register")) {
+    let newUrl = url.slice(0, -9);
+    window.location.href = newUrl;
+  }
+
+  HideAllForms();
+}
+
 function setLog() {
   let url = window.location.href;
 
@@ -57,7 +71,7 @@ function setReg() {
 window.onhashchange = CheckCurrentUrl;
 
 if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
-  CheckCurrentUrl;
+  CheckCurrentUrl();
 }
 
 function CheckCurrentUrl() {

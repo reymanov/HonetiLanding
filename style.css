@@ -9,6 +9,10 @@ body {
   overflow-x: hidden;
 }
 
+button {
+  outline: none;
+}
+
 main {
   width: 100vw;
   height: 100vh;
@@ -23,24 +27,40 @@ main {
 .form-container {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 #loginPopup,
 #registerPopup {
-  width: 380px;
-  height: 280px;
-  background-color: rgba(14, 14, 14, 0.609);
-  border-radius: 5px;
+  width: 24em;
+  height: 18em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
   display: none;
   z-index: 4;
-  position: fixed;
+  position: relative;
   right: 4em;
   top: 6em;
   text-align: center;
   padding: 1.5em 1em;
   color: orange;
   box-shadow: 0px 10px 15px 0px rgba(50, 50, 50, 0.68);
+}
+
+.close-popup {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  color: rgb(0, 0, 0);
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  font-weight: 800;
+  padding: 0 0.2em;
+}
+
+.close-popup:hover {
+  cursor: pointer;
 }
 
 .form-container h2 {
@@ -72,7 +92,7 @@ main {
   transform: scale(1.05);
 }
 
-.form-container button {
+.form-container form button {
   background-color: orange;
   padding: 0.3em 1.5em;
   margin-top: 1em;
@@ -84,21 +104,21 @@ main {
   color: #fff;
 }
 
-.form-container button:hover {
+.form-container form button:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
 
 .form-container a {
   text-decoration: none;
-  color: rgb(197, 196, 196);
+  color: rgb(59, 59, 59);
   font-size: 1em;
   font-weight: 400;
   transition: color 0.1s ease;
 }
 
 .form-container a:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 header {
@@ -122,8 +142,17 @@ header {
   opacity: 0.5;
 }
 
+.mobile-nav {
+  display: none;
+  font-size: 3em;
+  color: #fff;
+  position: relative;
+  margin-top: 0.2em;
+}
+
 nav {
-  width: 640px;
+  width: 60vw;
+  max-width: 640px;
 }
 
 nav ul {
@@ -353,7 +382,7 @@ nav ul li:nth-child(3)::after {
 
 .pricing {
   width: 100%;
-  padding: 0 0 10em 0;
+  padding: 0 0 6em 0;
   background: linear-gradient(133deg, rgb(38, 18, 112), rgba(85, 20, 148, 1));
 }
 
@@ -499,8 +528,8 @@ nav ul li:nth-child(3)::after {
 .premium {
   display: flex;
   flex-direction: column;
-  width: 180px;
-  margin: 0 5% 0 2%;
+  width: 20%;
+  margin: 0 5% 0 5%;
 }
 
 .premium h3 {
@@ -566,7 +595,7 @@ nav ul li:nth-child(3)::after {
   transition: transform 0.5s ease;
 }
 
-.right-box-bottom button:nth-of-type(2) {
+.right-box-bottom a:nth-of-type(2) button {
   background-color: #fff;
   color: orange;
   border: 1.4px orange solid;
@@ -643,6 +672,14 @@ nav ul li:nth-child(3)::after {
 @media (max-width: 900px) {
   body {
     font-size: 13px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
   }
 
   .phones-container {
