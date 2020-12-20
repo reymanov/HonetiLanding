@@ -54,7 +54,13 @@ function setReg() {
   }
 }
 
-window.onhashchange = function () {
+window.onhashchange = CheckCurrentUrl;
+
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+  CheckCurrentUrl;
+}
+
+function CheckCurrentUrl() {
   let url = window.location.href;
 
   if (url.includes("#login")) {
@@ -64,4 +70,4 @@ window.onhashchange = function () {
   } else {
     HideAllForms();
   }
-};
+}

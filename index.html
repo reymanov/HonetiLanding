@@ -62,8 +62,23 @@
     </main>
 
     <section class="form-container">
-        <div id="loginPopup">Login Form</div>
-        <div id="registerPopup">Register Form</div>
+        <div id="loginPopup">
+            <h2>Zaloguj się</h2>
+          <form action="post">
+            <input autocomplete="email" type="email" name="email" id="logemail" required placeholder="Email">
+            <input autocomplete="current-password" type="password" name="password" required placeholder="Hasło">
+            <button type="submit">Zaloguj</button>
+          </form>
+          <a href="#">Zapomniałeś hasła ?</a>
+        </div>
+        <div id="registerPopup">
+            <h2>Zarejestruj się</h2>
+          <form action="post">
+            <input autocomplete="email" type="email" name="email" id="regemail" required placeholder="Email">
+            <input autocomplete="new-password" type="password" name="password" required placeholder="Password">
+            <button type="submit">Zapisz się</button>
+          </form>
+        </div>
     </section>
 
     <section class="phones" id="phones">
