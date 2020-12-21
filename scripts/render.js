@@ -1,23 +1,17 @@
-function ShowLoginForm() {
-  let loginPopup = document.querySelector("#loginPopup");
-  let registerPopup = document.querySelector("#registerPopup");
+let loginPopup = document.querySelector("#loginPopup");
+let registerPopup = document.querySelector("#registerPopup");
 
+function ShowLoginForm() {
   loginPopup.style.display = "block";
   registerPopup.style.display = "none";
 }
 
 function ShowRegisterForm() {
-  let loginPopup = document.querySelector("#loginPopup");
-  let registerPopup = document.querySelector("#registerPopup");
-
   loginPopup.style.display = "none";
   registerPopup.style.display = "block";
 }
 
 function HideAllForms() {
-  let loginPopup = document.querySelector("#loginPopup");
-  let registerPopup = document.querySelector("#registerPopup");
-
   loginPopup.style.display = "none";
   registerPopup.style.display = "none";
 }
