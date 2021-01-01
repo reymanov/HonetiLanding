@@ -1,6 +1,6 @@
 # Logo Layout
 
-Website layout created on recruitment purposes
+Layout created on recruitment purposes
 
 ## Live Preview
 
@@ -11,3 +11,5 @@ https://reymanov.github.io/LogoWebsite/
 * HTML
 * CSS
 * JavaScript
+
+### *desktop only*
